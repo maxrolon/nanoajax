@@ -72,7 +72,7 @@ exports.ajax = function (params, callback) {
   req.onabort = cb(null, 'Abort')
 
   if (body) {
-    setDefault(headers, 'X-Requested-With', 'XMLHttpRequest')
+    setDefault(headers, 'XMLHttpRequest')
 
     if (!global.FormData || !(body instanceof global.FormData)) {
       setDefault(headers, 'Content-Type', 'application/x-www-form-urlencoded')
